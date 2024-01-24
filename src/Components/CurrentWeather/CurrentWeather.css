@@ -31,7 +31,7 @@
 .weather-info {
     color: rgb(198, 227, 252);
     border-radius: 30%;
-    background-image: linear-gradient(360deg, #130754 0%, #3b5bc5 100%);
+    background-image: linear-gradient(360deg, rgb(48, 48, 94) 0%, rgb(78, 78, 163) 100%);
     height: 100px;
     width: 100px;
     display: flex;
@@ -48,7 +48,7 @@
 .weather-info-feels-like {
     color: rgb(198, 227, 252);
     border-radius: 35%;
-    background-color: rgb(72, 72, 150);
+    background-image: linear-gradient(360deg, rgb(48, 48, 94) 0%, rgb(78, 78, 163) 100%);
     height: 100px;
     width: 100px;
     display: flex;

@@ -1,8 +1,8 @@
 .weather-container {
     width: 500px;
-    height: 650px;
+    height: auto;
     margin: auto;
     margin-top: 75px;
-    border-radius: 12px;
+    border-radius: 20px;
     background-image: linear-gradient(180deg, #130754 0%, #3b5bc5 100%);
 }

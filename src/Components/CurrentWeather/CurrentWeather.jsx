@@ -76,6 +76,7 @@ const CurrentWeather = ({ weatherType }) => {
         case 'light snow':
         case 'moderate snow':
         case 'heavy snow':
+        case 'light sleet':
             if (isDay === 1) {
                 imagePath = snowy3;
             }

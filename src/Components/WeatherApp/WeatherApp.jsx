@@ -9,6 +9,7 @@ import { WeatherContext } from '../../Services/WeatherContext.jsx';
 //Components
 import SearchTopBar from '../SearchTopBar/SearchTopBar';
 import CurrentWeather from '../CurrentWeather/CurrentWeather';
+import CurrentWeatherDetails from '../CurrentWeatherDetails/CurrentWeatherDetails.jsx';
 
 
 
@@ -24,6 +25,8 @@ const WeatherApp = () => {
             <SearchTopBar />
 
             <CurrentWeather weatherType={weatherData && weatherData.current.condition.text} />
+
+            <CurrentWeatherDetails />
 
         </div>
 
