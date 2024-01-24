@@ -34,6 +34,7 @@ const CurrentWeather = ({ weatherType }) => {
 
         case 'partly cloudy':
         case 'cloudy':
+        case 'overcast':
             if (isDay === 1) {
                 imagePath = cloudyDay3;
             }
