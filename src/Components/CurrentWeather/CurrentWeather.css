@@ -39,6 +39,7 @@
     justify-content: center;
     font-style: normal;
     margin-right: 10px;
+    text-align: center;
 }
 
 .weather-info:hover {
@@ -56,6 +57,7 @@
     justify-content: center;
     font-style: normal;
     margin-left: 10px;
+    text-align: center;
 }
 
 .weather-info-feels-like:hover {
