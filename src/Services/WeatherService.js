@@ -22,4 +22,22 @@ async function getWeatherData(location) {
     }
 }
 
-export default getWeatherData;
+async function getForecastData(location) {
+    try {
+        const response = await axios.get(`${API_URL}/forecast.json`, {
+            params: {
+                key: API_KEY,
+                q: location,
+                days: 6,
+            },
+        });
+
+        return response.data;
+
+    } catch (error) {
+        console.error('Error fetching forecast data:', error);
+        throw error;
+    }
+}
+
+export { getWeatherData, getForecastData };

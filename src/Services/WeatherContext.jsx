@@ -1,10 +1,11 @@
 import React, { createContext, useState, useEffect } from 'react';
-import getWeatherData from './WeatherService.js';
+import { getWeatherData, getForecastData } from './WeatherService.js';
 
 export const WeatherContext = createContext();
 
 export const WeatherProvider = ({ children }) => {
     const [weatherData, setWeatherData] = useState(null);
+    const [forecastData, setForecastData] = useState(null);
     const [location, setLocation] = useState(null);
 
     useEffect(() => {
@@ -19,11 +20,15 @@ export const WeatherProvider = ({ children }) => {
             getWeatherData(location)
                 .then(data => setWeatherData(data))
                 .catch(error => console.error(error));
+
+            getForecastData(location)
+                .then(data => setForecastData(data))
+                .catch(error => console.error(error));
         }
     }, [location]);
 
     return (
-        <WeatherContext.Provider value={{ weatherData, setWeatherData, setLocation }}>
+        <WeatherContext.Provider value={{ weatherData, setWeatherData, forecastData, setForecastData, setLocation }}>
             {children}
         </WeatherContext.Provider>
     );

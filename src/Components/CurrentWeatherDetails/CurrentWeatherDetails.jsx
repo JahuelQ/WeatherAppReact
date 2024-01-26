@@ -24,7 +24,7 @@ const CurrentWeatherDetails = () => {
 
     return (
         <div className="current-weather-details">
-            <img src={plusImage} alt="plus sign that expand" onClick={handleExpand} />
+            <img src={isExpanded ? minusImage : plusImage} alt="expand/collapse sign" onClick={handleExpand} />
             {isExpanded && (
                 <div className="expanded-weather-details">
                     {
