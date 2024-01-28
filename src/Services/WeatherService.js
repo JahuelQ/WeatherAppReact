@@ -40,4 +40,21 @@ async function getForecastData(location) {
     }
 }
 
-export { getWeatherData, getForecastData };
+async function getAutoCompleteSearch(city) {
+    try {
+        const response = await axios.get(`${API_URL}/search.json`, {
+            params: {
+                key: API_KEY,
+                q: city,
+            },
+        });
+
+        return response.data;
+
+    } catch (error) {
+        console.error('Error fetching forecast data:', error);
+        throw error;
+    }
+}
+
+export { getWeatherData, getForecastData, getAutoCompleteSearch };

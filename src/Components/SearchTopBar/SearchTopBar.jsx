@@ -1,4 +1,5 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
+import { getAutoCompleteSearch } from '../../Services/WeatherService';
 
 //Services
 import { WeatherContext } from '../../Services/WeatherContext.jsx';
@@ -9,16 +10,23 @@ import './SearchTopBar.css';
 //ASSETS
 import searchIcon from '../Assets/search-location.svg';
 
-
-
 const SearchTopBar = () => {
     const { setLocation } = useContext(WeatherContext);
     const [searchTerm, setSearchTerm] = useState('');
+    const [autoCompleteResults, setAutoCompleteResults] = useState([]);
 
-    
+    useEffect(() => {
+        if (searchTerm) {
+            getAutoCompleteSearch(searchTerm)
+                .then(data => setAutoCompleteResults(data))
+                .catch(error => console.error(error));
+        }
+    }, [searchTerm]);
 
     const handleSearch = (event) => {
-        event.preventDefault();
+        if (event) {
+            event.preventDefault();
+        }
         setLocation(searchTerm);
     };
 
@@ -32,10 +40,24 @@ const SearchTopBar = () => {
                     value={searchTerm}
                     onChange={event => setSearchTerm(event.target.value)} />
 
+                <div className='autocomplete-results'>
+                    {autoCompleteResults.map((result, index) => {
+                        return (
+                            <div
+                                key={index}
+                                onClick={() => {
+                                    setSearchTerm(result.name);
+                                    handleSearch();
+                                }}
+                                className='autocomplete-result'>
+                                {result.name}
+                            </div>
+                        )
+                    })}
+                </div>
+
                 <button type='submit' className='search-button'>
-
                     <img src={searchIcon} alt='search button' className='search-icon' />
-
                 </button>
             </form>
         </div>
