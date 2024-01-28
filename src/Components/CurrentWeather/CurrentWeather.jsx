@@ -30,7 +30,6 @@ const CurrentWeather = ({ weatherType }) => {
 
     let isDay = weatherData?.current.is_day;
 
-    console.log(weatherData);
 
     switch (weatherTypes) {
 
