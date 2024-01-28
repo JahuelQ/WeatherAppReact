@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 
-import { WeatherContext } from '../../Services/WeatherContext.jsx';
+// import { WeatherContext } from '../../Services/WeatherContext.jsx';
 
 //CSS
 import './CurrentWeatherDetails.css';
@@ -11,10 +11,13 @@ import minusImage from '../Assets/minus.svg';
 
 //Components
 import CurrentHumidity from '../CurrentHumidity/CurrentHumidity';
+import WindSpeed from '../WindSpeed/WindSpeed';
+import Precipitation from '../Precipitation/Precipitation';
+import WindDirection from '../WindDirection/WindDirection';
 
 const CurrentWeatherDetails = () => {
 
-    const { weatherData } = useContext(WeatherContext);
+    // const { weatherData } = useContext(WeatherContext);
 
     const [isExpanded, setIsExpanded] = useState(false);
 
@@ -27,10 +30,15 @@ const CurrentWeatherDetails = () => {
             <img src={isExpanded ? minusImage : plusImage} alt="expand/collapse sign" onClick={handleExpand} />
             {isExpanded && (
                 <div className="expanded-weather-details">
-                    {
-                        <CurrentHumidity weatherData={weatherData} />
                     
-                    }
+                        <CurrentHumidity />
+
+                        <Precipitation />
+
+                        <WindSpeed />
+
+                        <WindDirection />
+                    
                 </div>
             )}
         </div>

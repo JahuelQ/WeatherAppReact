@@ -7,13 +7,9 @@ import './ForecastWeather.css';
 const ForecastWeather = () => {
   const { forecastData } = useContext(WeatherContext);
 
-  console.log(forecastData);
-
   const getDayOfWeek = (dateString) => {
     const date = new Date(dateString);
     return date.toLocaleString('en-US', { weekday: 'long' });
-
-
   };
 
   return (

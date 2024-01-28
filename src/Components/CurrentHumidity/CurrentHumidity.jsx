@@ -11,7 +11,7 @@ const CurrentHumidity = () => {
     const { weatherData } = useContext(WeatherContext);
 
     return (
-        <div className='current-weather-details'>
+        // <div className='current-weather-details'>
 
             <div className='humidity-container'>
 
@@ -19,7 +19,7 @@ const CurrentHumidity = () => {
 
             </div>
 
-        </div>
+        // </div>
     )
 }
 
