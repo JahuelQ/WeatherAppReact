@@ -31,10 +31,10 @@
 .weather-info {
     color: rgb(198, 227, 252);
     border-radius: 30%;
-    /* background-image: linear-gradient(360deg, rgb(48, 48, 94) 0%, rgb(78, 78, 163) 100%); */
-    background: linear-gradient(0deg, #4b4bd1, #1b1b92);
-    box-shadow: 0 6px 6px #000080, 0 6px 6px #00000a;
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(360deg, rgb(48, 48, 94) 0%, rgb(78, 78, 163) 100%);
+    /* background: linear-gradient(0deg, #4b4bd1, #1b1b92);
+    box-shadow: 0 6px 6px #000080, 0 6px 6px #00000a; */
+    /* text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); */
     height: 100px;
     width: 100px;
     display: flex;
@@ -52,10 +52,10 @@
 .weather-info-feels-like {
     color: rgb(198, 227, 252);
     border-radius: 35%;
-    /* background-image: linear-gradient(360deg, rgb(48, 48, 94) 0%, rgb(78, 78, 163) 100%); */
-    background: linear-gradient(0deg, #4b4bd1, #1b1b92);
-    box-shadow: 0 6px 6px #000080, 0 6px 6px #00000a;
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(360deg, rgb(48, 48, 94) 0%, rgb(78, 78, 163) 100%);
+    /* background: linear-gradient(0deg, #4b4bd1, #1b1b92);
+    box-shadow: 0 6px 6px #000080, 0 6px 6px #00000a; */
+    /* text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); */
     height: 100px;
     width: 100px;
     display: flex;
