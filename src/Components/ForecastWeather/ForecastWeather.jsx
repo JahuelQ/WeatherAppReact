@@ -7,16 +7,21 @@ import './ForecastWeather.css';
 const ForecastWeather = () => {
   const { forecastData } = useContext(WeatherContext);
 
+  console.log(forecastData);
+
   const getDayOfWeek = (dateString) => {
     const date = new Date(dateString);
     return date.toLocaleString('en-US', { weekday: 'long' });
+
+
   };
 
   return (
     <div className='forecast-container'>
       {forecastData && forecastData.forecast && forecastData.forecast.forecastday.slice(1, 6).map((day, index) => (
         <div className='forecast-day' key={index}>
-          <h2 className='day-number'>{getDayOfWeek(day.date)}</h2>
+          <h2 className='forecast-weekday'>{getDayOfWeek(day.date)}</h2>
+          <img className='forecast-image' src={day.day.condition.icon} alt='weather icon' />
           <p className='temperature high'>High: {day.day.maxtemp_c}°C</p>
           <p className='temperature low'>Low: {day.day.mintemp_c}°C</p>
         </div>

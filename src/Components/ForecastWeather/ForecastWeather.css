@@ -30,13 +30,25 @@
 .temperature.high {
     margin: 0;
     font-style: normal;
-    font-size: large;
+    font-size: medium;
     font-weight: bold;
 }
 
 .temperature.low {
     margin: 0;
     font-style: normal;
-    font-size: large;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.forecast-image {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+.forecast-weekday {
+    margin: 0;
+    font-size: larger;
     font-weight: bold;
 }
