@@ -1,14 +1,15 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { getAutoCompleteSearch } from '../../Services/WeatherService';
 
 //Services
 import { WeatherContext } from '../../Services/WeatherContext.jsx';
+import { getAutoCompleteSearch } from '../../Services/WeatherService';
 
 //CSS
 import './SearchTopBar.css';
 
 //ASSETS
 import searchIcon from '../Assets/search-location.svg';
+
 
 const SearchTopBar = () => {
     const { setLocation } = useContext(WeatherContext);
@@ -48,6 +49,7 @@ const SearchTopBar = () => {
                                 onClick={() => {
                                     setSearchTerm(result.name);
                                     handleSearch();
+                                    setAutoCompleteResults([]);
                                 }}
                                 className='autocomplete-result'>
                                 {result.name}
@@ -59,6 +61,7 @@ const SearchTopBar = () => {
                 <button type='submit' className='search-button'>
                     <img src={searchIcon} alt='search button' className='search-icon' />
                 </button>
+                
             </form>
         </div>
     );

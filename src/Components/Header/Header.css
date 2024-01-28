@@ -1,9 +1,8 @@
 .app-header {
-    color: rgb(210, 210, 240);
     padding: 20px;
     text-align: center;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
-    background-image: linear-gradient(180deg, #130754 0%, #3b5bc5 100%);
+    background: linear-gradient(0deg, #54b4e0, #112050);
+    box-shadow: 0 5px 100px #89CFF0, 0 4px 20px #1D2951;
     width: 70%;
     height: 50px;
     margin: 0 auto;
@@ -15,6 +14,8 @@
 
 .header-title {
     margin: 0;
+    color: rgb(194, 194, 207);
     font-size: 1.7em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
