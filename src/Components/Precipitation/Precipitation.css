@@ -1,5 +1,5 @@
 .precipitation-info {
-    color: rgb(198, 227, 252);
+    color: white;
     border-radius: 30%;
     background-image: linear-gradient(360deg, rgb(48, 48, 94) 0%, rgb(78, 78, 163) 100%);
     height: 100px;
